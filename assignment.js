@@ -37,19 +37,18 @@ var finalCost=hotelCost(30
     );
 console.log(finalCost);
 // megaFriend
-function megaFriend(arr) {
-    var len = arr.length, max = '';
-    while (len--) {
-      if (arr[len] > max) {
-        max = arr[len];
-      }
-    }
-    return max;
-  };
-var largestName=megaFriend(['Muhammad Daud','Johir','Monir']);
-console.log(largestName);
+function megaFriend(friend){
+    var longest='';
+    friend.map(function(str){
+        if(str.length>longest.length){
+            longest=str;
+        }
 
-
+    })
+    return longest;
+}
+var longestName=megaFriend(['Muhamad Daud','Rakib','Johir']);
+console.log(longestName);
 
 
 
